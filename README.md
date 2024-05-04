@@ -1,1 +1,1 @@
-# mini_nft_marketplace
+# Mini NFT MarketPlace
