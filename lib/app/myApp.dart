@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:mini_nft_marketplace/core/resources/routsManager.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Merienda-Regular"),
-
+      routes: RoutManager.PageRoutes,
+      initialRoute: "Onboarding",
     );
   }
 }
