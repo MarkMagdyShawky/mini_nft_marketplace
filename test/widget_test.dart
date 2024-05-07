@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mini_nft_marketplace/app/myApp.dart';
 
 import 'package:mini_nft_marketplace/main.dart';
 
