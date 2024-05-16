@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "Merienda-Regular"),
+      theme: ThemeData(fontFamily: "Acme-Regular"),
       routes: RoutManager.PageRoutes,
       initialRoute: "Onboarding",
     );
