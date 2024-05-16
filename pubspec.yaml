@@ -93,5 +93,17 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+    - family: Acme-Regular
+      fonts:
+         - asset: fonts/Acme-Regular.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+    - family: Montserrat-ExtraLight
+      fonts:
+        - asset: fonts/Montserrat-ExtraLight.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
