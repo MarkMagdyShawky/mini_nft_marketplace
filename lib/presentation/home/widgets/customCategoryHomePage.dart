@@ -29,7 +29,7 @@ class CustomCategoryHomePage extends StatelessWidget {
               bottomRight: Radius.circular(20),
             ),
             child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaY: 3, sigmaX: 3),
+              filter: ImageFilter.blur(sigmaY: 5, sigmaX:5),
               child: Container(
                 alignment: Alignment.center,
                 height: 45.06,
@@ -40,7 +40,7 @@ class CustomCategoryHomePage extends StatelessWidget {
                       end: Alignment.bottomCenter,
                       colors: [
                         Colors.black.withOpacity(0),
-                        Colors.black.withOpacity(0.4),
+                        Colors.black.withOpacity(0.3),
                       ],
                     )),
                 child: TextManagerNormal(myText:caption,FontSize: 20,),

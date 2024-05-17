@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mini_nft_marketplace/core/resources/TextManager.dart';
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 75,
-        backgroundColor: kPrimaryColor2,
+        backgroundColor: kBackgroundColor2,
         elevation: 0,
         title: TextManagerBold(
           myText: StringManager.HomeTitle,
@@ -26,22 +27,29 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      backgroundColor: kPrimaryColor2,
+      backgroundColor: kBackgroundColor2,
       body: SafeArea(
         child: Column(
           children: [
+            // category part
             Container(
               height: 167,
-              child: ListView(
-                
+              child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                children: [
-
-                CustomCategoryHomePage(caption: "Art", imageName: ImageManager.HomePageImage1),
-                CustomCategoryHomePage(caption: "Art", imageName: ImageManager.HomePageImage1),
-                CustomCategoryHomePage(caption: "Art", imageName: ImageManager.HomePageImage1),
-
-              ],),
+                itemCount: StringManager.CategoriesCaption.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return CustomCategoryHomePage(
+                    caption: StringManager.CategoriesCaption[index],
+                    imageName:ImageManager.categoryImages[index],
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return Container(
+                    width: 10,
+                    color: kBackgroundColor2,
+                  );
+                },
+              ),
             )
           ],
         ),

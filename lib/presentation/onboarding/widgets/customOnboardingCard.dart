@@ -50,7 +50,7 @@ class CustomOnboardingCard extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
+                      border: Border.all(color: kButtonColor ),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: ClipRRect(
@@ -59,7 +59,7 @@ class CustomOnboardingCard extends StatelessWidget {
                         filter: ImageFilter.blur(
                             sigmaX: 10, sigmaY: 10),
                         child: MaterialButton(
-                          color: kPrimaryColor.withOpacity(0.6),
+                          color:  kButtonColor.withOpacity(0.5)  ,
 
                           onPressed: () {
                             Navigator.pushNamed(context, "Home");

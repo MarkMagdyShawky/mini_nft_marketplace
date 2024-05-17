@@ -7,4 +7,6 @@ class StringManager {
   static const String onboardingBtn = "Get Start now";
 //   ///////////////////////////////////////////////////////////////
   static const String HomeTitle = "NFT MarketPlace";
+  static const List<String> CategoriesCaption =  ["Music","Art","Virtual Worlds"];
+
 }

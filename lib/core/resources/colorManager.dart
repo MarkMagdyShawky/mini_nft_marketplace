@@ -6,4 +6,6 @@ const kSecondaryColor = Color(0xff767CB2);
 const kPThirdColor = Color(0xfff8dff2);
 const kFontColor1 = Colors.white;
 
-const kPrimaryColor2 = Color(0xff211134);
+const kBackgroundColor2 = Color(0xff211134);
+
+const kButtonColor = Color(0xff97A9F6) ;
