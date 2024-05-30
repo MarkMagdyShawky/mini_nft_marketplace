@@ -20,3 +20,7 @@
 
   ## Future Work
   - Create State page soon.
+    
+  ## Contributors
+- __Mark Magdy__
+   
