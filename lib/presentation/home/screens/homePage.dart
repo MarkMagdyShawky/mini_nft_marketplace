@@ -12,7 +12,7 @@ import 'package:mini_nft_marketplace/core/resources/imageManager.dart';
 import 'package:mini_nft_marketplace/core/resources/stringManagement.dart';
 import 'package:mini_nft_marketplace/presentation/home/widgets/customCategoryHomePage.dart';
 import 'package:mini_nft_marketplace/presentation/home/widgets/customHomePageTitle.dart';
-import 'package:mini_nft_marketplace/presentation/onboarding/widgets/bottomTabBar.dart';
+import 'package:mini_nft_marketplace/presentation/home/widgets/bottomTabBar.dart';
 
 import '../widgets/customCollectionHomePage.dart';
 import '../widgets/customTopSellerHomePage.dart';
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      bottomNavigationBar: BottomTabBar(),
+      // bottomNavigationBar:Container(child:  BottomTabBar() , height: 115,),
       drawer: MarkDrawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: kFontColor1),
@@ -44,109 +44,115 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: kBackgroundColor2,
       body: SafeArea(
-        child: ListView(
+        child: Stack(
           children: [
-            Column(
-              children: [
-                // category part
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  height: 167,
-                  child: ListView.separated(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: StringManager.CategoriesCaption.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return CustomCategoryHomePage(
-                        caption: StringManager.CategoriesCaption[index],
-                        imageName: ImageManager.categoryImages[index],
-                      );
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return Container(
-                        width: 10,
-                        color: kBackgroundColor2,
-                      );
-                    },
+            Padding(
+              padding:
+                const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: ListView(
+                children: [
+                  // category part
+                  Container(
+                    height: 167,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: StringManager.CategoriesCaption.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return CustomCategoryHomePage(
+                          caption: StringManager.CategoriesCaption[index],
+                          imageName: ImageManager.categoryImages[index],
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) {
+                        return Container(
+                          width: 10,
+                          color: kBackgroundColor2,
+                        );
+                      },
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  alignment: Alignment.topLeft,
-                  child: TextManagerNormal(
-                      myText: StringManager.HomepageCollectionTitle,
-                      FontSize: 18),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 210,
-                  child: ListView.separated(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: StringManager.CollectionsCaption.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return CustomCollectionHomePage(
-                        collectionCaption:
-                            StringManager.CollectionsCaption[index],
-                        collectionImage: ImageManager.collectionsImages[index],
-                        likesNumber:
-                            StringManager.CollectionLikesNumbers[index],
-                      );
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return Container(
-                        width: 10,
-                        color: kBackgroundColor2,
-                      );
-                    },
+                  SizedBox(
+                    height: 25,
                   ),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  alignment: Alignment.topLeft,
-                  child: TextManagerNormal(
-                      myText: StringManager.HomepageTopSellerTitle,
-                      FontSize: 18),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  width: double.infinity,
-                  height: 270,
-                  child: ListView.separated(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: StringManager.TopSellerSubtitles.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return CustomTopSellerHomePage(
-                        topSellerSubtitle:
-                            StringManager.TopSellerSubtitles[index],
-                        topSellerTitle: StringManager.TopSellerTitles[index],
-                        topSellerEthereum:
-                            StringManager.TopSellerEthereum[index],
-                        topSellerImage: ImageManager.topSellerImages[index],
-                        likesNumber: StringManager.TopSellerLikesNumbers[index],
-                      );
-                    },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return Container(
-                        width: 10,
-                        color: kBackgroundColor2,
-                      );
-                    },
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: TextManagerNormal(
+                        myText: StringManager.HomepageCollectionTitle,
+                        FontSize: 18),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 25,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 210,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: StringManager.CollectionsCaption.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return CustomCollectionHomePage(
+                          collectionCaption:
+                              StringManager.CollectionsCaption[index],
+                          collectionImage: ImageManager.collectionsImages[index],
+                          likesNumber:
+                              StringManager.CollectionLikesNumbers[index],
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) {
+                        return Container(
+                          width: 10,
+                          color: kBackgroundColor2,
+                        );
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: TextManagerNormal(
+                        myText: StringManager.HomepageTopSellerTitle,
+                        FontSize: 18),
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                    SizedBox(
+                    width: double.infinity,
+                    height: 270,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: StringManager.TopSellerSubtitles.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return CustomTopSellerHomePage(
+                          topSellerSubtitle:
+                              StringManager.TopSellerSubtitles[index],
+                          topSellerTitle: StringManager.TopSellerTitles[index],
+                          topSellerEthereum:
+                              StringManager.TopSellerEthereum[index],
+                          topSellerImage: ImageManager.topSellerImages[index],
+                          likesNumber: StringManager.TopSellerLikesNumbers[index],
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) {
+                        return Container(
+                          width: 10,
+                          color: kBackgroundColor2,
+                        );
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 120,)
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 115,
+                child: BottomTabBar(),
+              ),
             ),
           ],
         ),
