@@ -26,4 +26,9 @@ class StringManager {
   static const String StatePageRanking = "Ranking";
   static const String StatePageActivity = "Activity";
 
+  static const List<String> stateCardTitles = ['Azumi','Hape prime','Cryoto','Ape Club','Bat','Mutant','Metaverse','Mountain','Mutant Ape','The Sandbox'];
+  static const String stateCardSubtitle = "view info" ;
+  static const List<String> stateCardEthereum = ['200055.02','180055.45','90055.62','88055.12','10055.06','9095.27','10055.02','10055.02','8055.73','5055.73','1055.02'];
+  static const List<String> stateCardEthereumPercent = ['3,99','33,99','-6.22','3,63','4,56','3,99','4,66','3,99','4,55','-1,46'];
+
 }

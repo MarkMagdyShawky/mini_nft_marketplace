@@ -18,6 +18,7 @@ class StatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double heightScreen = MediaQuery.of(context).size.height;
+    int cardsLength = ImageManager.stateCardImages.length;
 
     return Scaffold(
       backgroundColor: kBackgroundColor2,
@@ -67,10 +68,7 @@ class StatePage extends StatelessWidget {
           StateImageBackground(),
           StateCardBackground(),
           // Card
-          // ListView.separated(
-          //   itemCount: ,
-          // ),
-          CustomCardStatePage(index: "6", cardImage: "", cardTitle: "", cardSubtitle: "", price: "", percent: ""),
+         CustomCardStatePage(),
         ],
       )),
     );
