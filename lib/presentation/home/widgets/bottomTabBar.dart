@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import '../../../core/resources/colorManager.dart';
 
 class BottomTabBar extends StatelessWidget {
-  const BottomTabBar({super.key});
+  const BottomTabBar({super.key, required this.onPressedHome, required this.onPressedState});
+  final VoidCallback onPressedHome;
+  final VoidCallback onPressedState;
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +18,11 @@ class BottomTabBar extends StatelessWidget {
       children: [
         Positioned(
           bottom: 0,
-
           child: Container(
             width: widthScreen,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(60),
-                  topLeft: Radius.circular(60)),
+                  topRight: Radius.circular(60), topLeft: Radius.circular(60)),
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaY: 100, sigmaX: 100),
                 child: Container(
@@ -35,23 +35,39 @@ class BottomTabBar extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        IconButton(onPressed: (){
-                          Navigator.popAndPushNamed(context, "Home");
-                            }, icon: Icon(Icons.house_outlined , size: 29 , color: kFontColor1,)),
-                        IconButton(onPressed: (){
-                          Navigator.popAndPushNamed(context, "State");
-
-                        }, icon: Icon(Icons.bar_chart_outlined , size: 29, color: kFontColor1,)),
-
+                        IconButton(
+                            onPressed: onPressedHome,
+                            icon: Icon(
+                              Icons.house_outlined,
+                              size: 29,
+                              color: kFontColor1,
+                            )),
+                        IconButton(
+                            onPressed: onPressedState,
+                            icon: Icon(
+                              Icons.bar_chart_outlined,
+                              size: 29,
+                              color: kFontColor1,
+                            )),
                         Container(
                           width: 30,
                         ),
-                        IconButton(onPressed: (){}, icon: Icon(Icons.search_rounded , size: 29 , color: kFontColor1,)),
-                        IconButton(onPressed: (){
-                          Navigator.popAndPushNamed(context, "Onboarding");
-
-                        }, icon: Icon(Icons.person_2_outlined , size: 29 , color: kFontColor1,)),
-
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.search_rounded,
+                              size: 29,
+                              color: kFontColor1,
+                            )),
+                        IconButton(
+                            onPressed: () {
+                              Navigator.popAndPushNamed(context, "Onboarding");
+                            },
+                            icon: Icon(
+                              Icons.person_2_outlined,
+                              size: 29,
+                              color: kFontColor1,
+                            )),
                       ],
                     ),
                   ),
@@ -69,8 +85,13 @@ class BottomTabBar extends StatelessWidget {
                   sides: 6,
                   pointRounding: 0.5,
                 )),
-            child: IconButton(onPressed: (){}, icon: Icon(Icons.add , size: 35 , color: kFontColor1,)),
-
+            child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.add,
+                  size: 35,
+                  color: kFontColor1,
+                )),
             width: 70,
             height: 70,
           ),

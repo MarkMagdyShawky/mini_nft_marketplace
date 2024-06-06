@@ -27,7 +27,7 @@ class CustomOnboardingCard extends StatelessWidget {
                   )
                 ]),
             width: 306,
-            height: 191,
+            height: 200,
             alignment: Alignment.center,
             child: Container(
               padding: EdgeInsets.symmetric(
@@ -51,10 +51,10 @@ class CustomOnboardingCard extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       border: Border.all(color: kButtonColor ),
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(25),
                     ),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(25),
                       child: BackdropFilter(
                         filter: ImageFilter.blur(
                             sigmaX: 10, sigmaY: 10),
@@ -65,7 +65,7 @@ class CustomOnboardingCard extends StatelessWidget {
                             Navigator.pushNamed(context, "Home");
                           },
                           padding: EdgeInsets.symmetric(
-                            horizontal: 45,
+                            horizontal: 50,
                             vertical: 12,
                           ),
                           child: Text(

@@ -42,7 +42,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/icons/coin.png"
+  image_path: "assets/icons/nft.png"
   min_sdk_android: 21
   flutter_test:
     sdk: flutter

@@ -9,3 +9,5 @@ const kFontColor1 = Colors.white;
 const kBackgroundColor2 = Color(0xff211134);
 
 const kButtonColor = Color(0xff97A9F6) ;
+
+const kThirdColor = Color(0xff292782);

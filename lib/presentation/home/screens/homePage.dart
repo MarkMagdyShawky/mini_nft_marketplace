@@ -10,9 +10,11 @@ import 'package:mini_nft_marketplace/core/resources/TextManager.dart';
 import 'package:mini_nft_marketplace/core/resources/colorManager.dart';
 import 'package:mini_nft_marketplace/core/resources/imageManager.dart';
 import 'package:mini_nft_marketplace/core/resources/stringManagement.dart';
+import 'package:mini_nft_marketplace/presentation/home/screens/homePart.dart';
 import 'package:mini_nft_marketplace/presentation/home/widgets/customCategoryHomePage.dart';
 import 'package:mini_nft_marketplace/presentation/home/widgets/customHomePageTitle.dart';
 import 'package:mini_nft_marketplace/presentation/home/widgets/bottomTabBar.dart';
+import 'package:mini_nft_marketplace/presentation/state/screens/statePage.dart';
 
 import '../widgets/customCollectionHomePage.dart';
 import '../widgets/customTopSellerHomePage.dart';
@@ -25,133 +27,46 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int index = 0;
+  List<Widget> bodyPart = [HomePart(), StatePage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       // bottomNavigationBar:Container(child:  BottomTabBar() , height: 115,),
-      drawer: MarkDrawer(),
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: kFontColor1),
-        toolbarHeight: 75,
-        backgroundColor: kBackgroundColor2,
-        elevation: 0,
-        title: TextManagerBold(
-          myText: StringManager.HomeTitle,
-          FontSize: 25.5,
-        ),
-        centerTitle: true,
-      ),
+      // drawer: MarkDrawer(),
+      // // appBar: AppBar(
+      // //   iconTheme: IconThemeData(color: kFontColor1),
+      // //   toolbarHeight: 75,
+      // //   backgroundColor: kBackgroundColor2,
+      // //   elevation: 0,
+      // //   title: TextManagerBold(
+      // //     myText: StringManager.HomeTitle,
+      // //     FontSize: 25.5,
+      // //   ),
+      // //   centerTitle: true,
+      // // ),
       backgroundColor: kBackgroundColor2,
       body: SafeArea(
         child: Stack(
           children: [
-            Padding(
-              padding:
-                const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: ListView(
-                children: [
-                  // category part
-                  Container(
-                    height: 167,
-                    child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: StringManager.CategoriesCaption.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return CustomCategoryHomePage(
-                          caption: StringManager.CategoriesCaption[index],
-                          imageName: ImageManager.categoryImages[index],
-                        );
-                      },
-                      separatorBuilder: (BuildContext context, int index) {
-                        return Container(
-                          width: 10,
-                          color: kBackgroundColor2,
-                        );
-                      },
-                    ),
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: TextManagerNormal(
-                        myText: StringManager.HomepageCollectionTitle,
-                        FontSize: 18),
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 210,
-                    child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: StringManager.CollectionsCaption.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return CustomCollectionHomePage(
-                          collectionCaption:
-                              StringManager.CollectionsCaption[index],
-                          collectionImage: ImageManager.collectionsImages[index],
-                          likesNumber:
-                              StringManager.CollectionLikesNumbers[index],
-                        );
-                      },
-                      separatorBuilder: (BuildContext context, int index) {
-                        return Container(
-                          width: 10,
-                          color: kBackgroundColor2,
-                        );
-                      },
-                    ),
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: TextManagerNormal(
-                        myText: StringManager.HomepageTopSellerTitle,
-                        FontSize: 18),
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                    SizedBox(
-                    width: double.infinity,
-                    height: 270,
-                    child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: StringManager.TopSellerSubtitles.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return CustomTopSellerHomePage(
-                          topSellerSubtitle:
-                              StringManager.TopSellerSubtitles[index],
-                          topSellerTitle: StringManager.TopSellerTitles[index],
-                          topSellerEthereum:
-                              StringManager.TopSellerEthereum[index],
-                          topSellerImage: ImageManager.topSellerImages[index],
-                          likesNumber: StringManager.TopSellerLikesNumbers[index],
-                        );
-                      },
-                      separatorBuilder: (BuildContext context, int index) {
-                        return Container(
-                          width: 10,
-                          color: kBackgroundColor2,
-                        );
-                      },
-                    ),
-                  ),
-                  SizedBox(height: 120,)
-                ],
-              ),
-            ),
+            bodyPart[index],
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 height: 115,
-                child: BottomTabBar(),
+                child: BottomTabBar(
+                  onPressedHome: () {
+                    setState(() {
+                      index = 0;
+                    });
+                  },
+                  onPressedState: () {
+                    setState(() {
+                      index = 1;
+                    });
+                  },
+                ),
               ),
             ),
           ],
