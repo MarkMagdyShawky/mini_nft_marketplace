@@ -21,5 +21,9 @@ class StringManager {
 
   static const List<String> TopSellerLikesNumbers =  ["8500","2050","3050","600","120","400","100","80"];
 
+// //////////////////////////////////////////////////////////////////////////////
+  static const String StatePagTitle = "State";
+  static const String StatePageRanking = "Ranking";
+  static const String StatePageActivity = "Activity";
 
 }

@@ -52,7 +52,7 @@ class TextManagerThin extends StatelessWidget {
         style: TextStyle(
             fontSize: FontSize,
             color: kFontColor1,
-            fontFamily: "Montserrat-ExtraLight" , fontWeight: FontWeight.bold),
+            fontFamily: "Montserrat-ExtraLight" , fontWeight: FontWeight.w600),
         textAlign: TextAlign.center,
       ),
     );

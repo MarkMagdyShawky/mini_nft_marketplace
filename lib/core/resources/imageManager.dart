@@ -35,7 +35,7 @@ class ImageManager {
   static const HomePageTopSeller6 = "assets/images/topSeller6.jpg";
   static const HomePageTopSeller7 = "assets/images/topSeller7.jpg";
   static const HomePageTopSeller8 = "assets/images/topSeller8.jpg";
-
+  static const StatePageBackground = "assets/images/stateBackground.png";
   static const List<String> topSellerImages = [
     ImageManager.HomePageTopSeller1,
     ImageManager.HomePageTopSeller2,
