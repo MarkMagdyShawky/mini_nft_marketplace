@@ -35,17 +35,17 @@ class _HomePageState extends State<HomePage> {
       extendBody: true,
       // bottomNavigationBar:Container(child:  BottomTabBar() , height: 115,),
       // drawer: MarkDrawer(),
-      // // appBar: AppBar(
-      // //   iconTheme: IconThemeData(color: kFontColor1),
-      // //   toolbarHeight: 75,
-      // //   backgroundColor: kBackgroundColor2,
-      // //   elevation: 0,
-      // //   title: TextManagerBold(
-      // //     myText: StringManager.HomeTitle,
-      // //     FontSize: 25.5,
-      // //   ),
-      // //   centerTitle: true,
-      // // ),
+      // appBar: AppBar(
+      //   iconTheme: IconThemeData(color: kFontColor1),
+      //   toolbarHeight: 75,
+      //   backgroundColor: kBackgroundColor2,
+      //   elevation: 0,
+      //   title: TextManagerBold(
+      //     myText: StringManager.HomeTitle,
+      //     FontSize: 25.5,
+      //   ),
+      //   centerTitle: true,
+      // ),
       backgroundColor: kBackgroundColor2,
       body: SafeArea(
         child: Stack(

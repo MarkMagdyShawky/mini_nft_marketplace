@@ -35,6 +35,7 @@ class BottomTabBar extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
+                        // move 2 home page
                         IconButton(
                             onPressed: onPressedHome,
                             icon: Icon(
@@ -42,6 +43,7 @@ class BottomTabBar extends StatelessWidget {
                               size: 29,
                               color: kFontColor1,
                             )),
+                        // move 2 state page
                         IconButton(
                             onPressed: onPressedState,
                             icon: Icon(

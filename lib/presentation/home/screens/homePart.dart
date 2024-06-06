@@ -128,7 +128,7 @@ class HomePart extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 105,)
+          SizedBox(height: 104,)
         ],
       ),
     );
