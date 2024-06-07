@@ -14,7 +14,7 @@ class CustomDropMenu extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: EdgeInsets.symmetric(horizontal: 25 , vertical: 5),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border:
@@ -47,12 +47,13 @@ class CustomDropMenu extends StatelessWidget {
                 onChanged: (String? value) {},
                 dropdownColor: kPrimaryColor,
                 borderRadius: BorderRadius.circular(30),
+                isDense: true,
               ),
             ),
           ),
 
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: EdgeInsets.symmetric(horizontal: 25 , vertical: 5),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border:
@@ -85,6 +86,8 @@ class CustomDropMenu extends StatelessWidget {
                 onChanged: (String? value) {},
                 dropdownColor: kPrimaryColor,
                 borderRadius: BorderRadius.circular(30),
+                isDense: true,
+
               ),
             ),
           ),
