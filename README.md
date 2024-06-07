@@ -1,7 +1,7 @@
 <h1 align="center">NFT MarketPlace</h1>
 
 --------------------------------------------------------------------------------
-![Blue Modern Mobile Application Presentation (1)](https://github.com/MarkMagdyShawky/mini_nft_marketplace/assets/106816564/ff991039-09bc-46ea-844d-e7c545da2081)
+![NFT App](https://github.com/MarkMagdyShawky/mini_nft_marketplace/assets/106816564/73f22adc-e929-41ee-adaa-3bda7aa3bcaf)
 
 ## Features
 - NFT Marketplace include many collection and categories. 
@@ -19,7 +19,8 @@
  
 
   ## Future Work
-  - Create State page soon.
+  - Create State page soon. --> Done ✅
+  - Make it dynamic 
     
   ## Contributors
 - __Mark Magdy__
