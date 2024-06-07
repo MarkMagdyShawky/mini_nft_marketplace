@@ -11,17 +11,18 @@
 - First download the repository and open it using vs code or android studio
 - Run the main.dart script to install the application
 - Click in get start and you will move to Home page
+- If you want the apk contact with me 👋🏻
 
-  ## Dependencies
-  - Flutter
-  - Dart
-  - Firebase
+## Dependencies
+- Flutter
+- Dart
+- Firebase
  
 
-  ## Future Work
-  - Create State page soon. --> Done ✅
-  - Make it dynamic 
-    
-  ## Contributors
+## Future Work
+- Create State page soon. --> Done ✅
+- Make it dynamic
+  
+## Contributors
 - __Mark Magdy__
    
