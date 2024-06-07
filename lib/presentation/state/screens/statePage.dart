@@ -2,11 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mini_nft_marketplace/core/resources/MarkDrawer.dart';
 import 'package:mini_nft_marketplace/core/resources/colorManager.dart';
 import 'package:mini_nft_marketplace/core/resources/stringManagement.dart';
 import 'package:mini_nft_marketplace/presentation/state/widgets/StateImageBackground.dart';
 import 'package:mini_nft_marketplace/presentation/state/widgets/customCardStatePage.dart';
+import 'package:mini_nft_marketplace/presentation/state/widgets/customDropMenue.dart';
 import 'package:mini_nft_marketplace/presentation/state/widgets/stateCardBackground.dart';
 
 import '../../../core/resources/TextManager.dart';
@@ -47,19 +49,6 @@ class StatePage extends StatelessWidget {
                         value: "Activity")
                   ])
         ],
-        // actions: [
-        //   TabBar(indicatorColor: kFontColor1,tabs: [
-        //     Tab(
-        //       icon: Icon(Icons.stacked_bar_chart),
-        //       text: "Active",
-        //     ),
-        //     Tab(
-        //       icon: Icon(Icons.stacked_bar_chart),
-        //       text: "Active",
-        //
-        //     ),
-        //   ])
-        // ],
       ),
       body: SafeArea(
           child: Stack(
@@ -67,8 +56,18 @@ class StatePage extends StatelessWidget {
           // for background
           StateImageBackground(),
           StateCardBackground(),
-          // Card
-         CustomCardStatePage(),
+          ListView(
+            children: [
+              CustomDropMenu(),
+              // Card
+              Container(
+                height: heightScreen,
+                width: double.infinity,
+                child: CustomCardStatePage(),
+              )
+            ],
+          ),
+          // 2 lists
         ],
       )),
     );
