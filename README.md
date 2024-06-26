@@ -1,7 +1,7 @@
 <h1 align="center">NFT MarketPlace</h1>
 
 --------------------------------------------------------------------------------
-![NFT App](https://github.com/MarkMagdyShawky/mini_nft_marketplace/assets/106816564/73f22adc-e929-41ee-adaa-3bda7aa3bcaf)
+![NFT App](./AppPhotos/NFTApp.png))
 
 ## Features
 - NFT Marketplace include many collection and categories. 
