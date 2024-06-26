@@ -1,7 +1,7 @@
 <h1 align="center">NFT MarketPlace</h1>
 
 --------------------------------------------------------------------------------
-![NFT App](./AppPhotos/NFTApp.png))
+![NFT App](./AppPhotos/NFTApp.png)
 
 ## Features
 - NFT Marketplace include many collection and categories. 
