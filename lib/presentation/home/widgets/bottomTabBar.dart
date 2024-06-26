@@ -62,8 +62,7 @@ class BottomTabBar extends StatelessWidget {
                               color: kFontColor1,
                             )),
                         IconButton(
-                            onPressed: () {
-                              Navigator.popAndPushNamed(context, "Onboarding");
+                            onPressed: () {Navigator.popAndPushNamed(context, "");
                             },
                             icon: Icon(
                               Icons.person_2_outlined,
