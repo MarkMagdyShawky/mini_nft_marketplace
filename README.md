@@ -5,13 +5,14 @@
 
 ## Features
 - NFT Marketplace include many collection and categories. 
-- You can put your own project to sell or you can buy.
+- User can put his own project to sell or can discover and buy from it.
 
 ## How to Use
-- First download the repository and open it using vs code or android studio
-- Run the main.dart script to install the application
-- Click in get start and you will move to Home page
-- If you want the apk contact with me 👋🏻
+- **Download and Install:** Ensure you have Flutter installed. Clone the repository and install dependencies.
+- **Main categories:** Navigate to the desired category and discover it.
+- **Trending and Top Seller:** Discover the trending and top seller collections.
+- **Ranking and Activity:** Show the rank and the activity for each category.
+- **Video for the app:** [Mark NFT Marketplace]([https://drive.google.com/file/d/1D1-ZLChpZIc-X_7bDmG1qWeVVRNw28eN/view?usp=drivesdk](https://drive.google.com/file/d/1DCNLWeLYjlVBcbyDesDEuuTWQkmfva8D/view?usp=drivesdk))
 
 ## Dependencies
 - Flutter
